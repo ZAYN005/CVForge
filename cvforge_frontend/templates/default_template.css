@@ -1,0 +1,18 @@
+/* ==============================================
+   CVForge Default Template Style (Final Version)
+   Two-column layout with top-aligned panels
+   ============================================== */
+
+.resume-wrapper,
+.left-panel,
+.right-panel {
+  display: inline-block !important;
+  vertical-align: top !important;
+}
+
+/* Additional print styles for PDF export if needed */
+@media print {
+  .resume-wrapper {
+    display: block !important;
+  }
+}

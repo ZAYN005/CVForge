@@ -1,0 +1,289 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+}
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.navbar .nav-links a {
+    color: white;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+.navbar .auth-links a {
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px;
+    text-decoration: none;
+    background-color: #6a4cff;
+    border-radius: 5px;
+}
+.navbar .auth-links a:hover {
+    background-color: #4a3ec2;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #7f39c1;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 1.2rem;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* Hero section image styling */
+.hero-section .hero-image {
+    max-width: 350px;               
+    border-radius: 12px;            
+    margin-left: auto;              
+    margin-right: auto;             
+    display: block;                 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Story section image styling for consistency */
+#story-section .story-image {
+    max-width: 350px;             
+    border-radius: 12px;           
+    margin-left: auto;            
+    margin-right: auto;             
+    display: block;                
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Optional: Styling for image within containers */
+.story-container img, .hero-section img {
+    max-width: 40%;               
+    border-radius: 12px;          
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+/* Mission Section */
+.mission-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+    color: #7f39c1;
+}
+.mission-section h2 {
+    font-size: 2rem;
+}
+.mission-section p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.icon-container {
+    margin-top: 30px;
+}
+.icon-container i {
+    font-size: 2rem;
+    margin: 0 20px;
+    color: #7f39c1;
+}
+
+/* Features Section */
+.features-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.features-section h2 {
+    font-size: 2rem;
+    color: #7f39c1;
+    margin-bottom: 30px;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.feature-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+.feature-card i {
+    font-size: 2.5rem;
+    color: #7f39c1;
+}
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+.feature-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 50px 20px;
+    background-color: #7f39c1;
+    color: white;
+    text-align: center;
+}
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.step {
+    flex: 1;
+    max-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    color: #7f39c1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.step i {
+    font-size: 2.5rem;
+}
+.step h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #7f39c1;
+    color: white;
+}
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.cta-section .btn-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #6a4cff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.cta-section .btn-primary:hover {
+    background-color: #4a3ec2;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+footer .tagline {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+/* Updated section styling */
+#story-section {
+    background-color: #ffffff;
+    padding: 30px 50px; /* Increased padding */
+    margin: 30px auto;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    max-width: 1200px;
+}
+
+#story-section h2 {
+    color: #6a4cff;
+    font-size: 2rem; /* Increase font size for headings */
+    margin-bottom: 20px; /* Space below heading */
+    font-weight: bold;
+}
+
+#story-section p {
+    font-size: 1.1rem; /* Slightly larger text */
+    line-height: 1.6; /* More line height for readability */
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Add image styling to balance with text */
+#story-section .story-image {
+    max-width: 350px;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for Story Section */
+.story-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.story-container img {
+    max-width: 40%;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-container .story-text {
+    flex: 1;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-weight: 300;
+}

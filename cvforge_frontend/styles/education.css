@@ -1,0 +1,305 @@
+/* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========== LAYOUT GRID ========== */
+.builder-container {
+  display: grid;
+  grid-template-columns: 18% 45% 37%;
+  height: 100vh;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  background: #101820;
+  color: #fff;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.brand h2 {
+  font-size: 26px;
+  color: #a87dff;
+  margin-bottom: 8px;
+}
+
+.welcome-box {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #a87dff;
+  margin: 12px 0 25px 0;
+}
+
+/* Step List */
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #ccc;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.steps li:hover {
+  color: #a87dff;
+}
+
+.steps li.active {
+  font-weight: bold;
+  color: #b784ff;
+  opacity: 1;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #a87dff;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.2s;
+}
+
+.logout-btn:hover {
+  background: #935eff;
+}
+
+/* ========== MAIN CONTENT ========== */
+.builder-content {
+  padding: 40px 50px;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ========== FORM STYLING ========== */
+form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ========== BUTTONS (CVForge Unified) ========== */
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s;
+  font-size: 15px;
+  color: #fff;
+}
+
+.btn-prev,
+.btn-next {
+  background: #333;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background: #555;
+}
+
+.btn-save,
+#addAnotherBtn {
+  background: #a87dff;
+}
+
+.btn-save:hover,
+#addAnotherBtn:hover {
+  background: #935eff;
+}
+
+button:hover {
+  box-shadow: 0 4px 12px rgba(168, 125, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ========== PREVIEW SECTION ========== */
+.preview {
+  position: relative;
+  overflow: hidden;
+}
+
+#previewBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+  z-index: 0;
+}
+
+.preview .card {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Experience Preview Text */
+.preview h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.preview p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.preview .section-title {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.preview .card h2 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.preview .card h3 {
+  margin-top: 1.2rem;
+  color: #b892ff;
+  font-size: 1.1rem;
+}
+
+.preview .card p {
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.steps li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Make text white */
+    display: block;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.steps li a:hover {
+    background-color: #6a4cff;
+    color: white;
+    border-radius: 5px;
+}
+
+.steps li.active a {
+    background-color: #6a4cff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Make all steps white text */
+.steps li {
+    color: white;
+}
+.sidebar {
+    background-color: #2d2d2d; /* Dark background */
+    color: white;
+}
+
+.steps li a {
+    text-decoration: none;
+    color: white; /* White text */
+    display: block;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.steps li a:hover {
+    background-color: #6a4cff;
+    color: white;
+    border-radius: 5px;
+}
+
+.steps li.active a {
+    background-color: #6a4cff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}

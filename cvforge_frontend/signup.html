@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | CVForge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #000;
+      padding: 20px;
+    }
+    
+    .wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 400px;
+      min-height: 650px;
+      background: transparent;
+      border: 5px solid hsl(0, 0%, 20%);
+      border-radius: 10px;
+      transition: .5s;
+      padding: 30px 20px;
+    }
+    
+    .wrapper:hover {
+      border: 5px solid #5300a0;
+      box-shadow: 0 0 20px #5300a0, inset 0 0 20px #5300a0;
+    }
+    
+    h2 {
+      font-size: 2em;
+      text-align: center;
+      color: #fff;
+      transition: .5s;
+      margin-bottom: 25px;
+    }
+    
+    .wrapper:hover h2 {
+      color: #5300a0;
+    }
+    
+    .input-box {
+      position: relative;
+      width: 100%;
+      margin: 15px 0;
+    }
+    
+    .input-box input {
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border: 2px solid #333;
+      outline: none;
+      border-radius: 5px;
+      font-size: 1em;
+      color: #fff;
+      padding: 0 10px 0 35px;
+      transition: .5s;
+    }
+    
+    .input-box input:focus {
+      border: 2px solid #5300a0;
+      box-shadow: 0 0 10px #5300a0, inset 0 0 10px #5300a0;
+    }
+    
+    .wrapper:hover .input-box input {
+      border: 2px solid #5300a0;
+      box-shadow: 0 0 10px #5300a0, inset 0 0 10px #5300a0;
+    }
+    
+    .input-box input::placeholder {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .input-box .icon {
+      position: absolute;
+      left: 10px;
+      color: #fff;
+      font-size: 1.2em;
+      line-height: 55px;
+      transition: .5s;
+      pointer-events: none; 
+      z-index: 1;
+    }
+    
+    .wrapper:hover .input-box .icon {
+      color: #5300a0;
+    }
+    
+    .password-validation {
+      margin: 8px 0 12px;
+      width: 100%;
+    }
+    
+    .validation-item {
+      display: flex;
+      align-items: center;
+      margin: 4px 0;
+      font-size: 0.8em;
+      color: #fff;
+      transition: .5s;
+    }
+    
+    .wrapper:hover .validation-item {
+      color: #5300a0;
+    }
+    
+    .validation-icon {
+      margin-right: 6px;
+      font-size: 0.9em;
+      min-width: 15px;
+    }
+    
+    .validation-icon.checked {
+      color: #00ff00;
+    }
+    
+    .validation-icon.unchecked {
+      color: #ff0000;
+    }
+    
+    .divider {
+      height: 1px;
+      background: #333;
+      margin: 12px 0;
+      transition: .5s;
+    }
+    
+    .wrapper:hover .divider {
+      background: #5300a0;
+      box-shadow: 0 0 5px #5300a0;
+    }
+    
+    button {
+      position: relative;
+      width: 100%;
+      height: 45px;
+      background: #5300a0;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      color: #fff;
+      font-weight: 500;
+      transition: .5s;
+      margin-top: 15px;
+    }
+    
+    button:hover {
+      background: #6a00cc;
+      box-shadow: 0 0 15px #5300a0;
+    }
+    
+    button:disabled {
+      background: #666;
+      cursor: not-allowed;
+    }
+    
+    .register-link {
+      font-size: .9em;
+      text-align: center;
+      margin: 20px 0 10px;
+    }
+    
+    .register-link p {
+      color: #fff;
+    }
+    
+    .register-link p a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      transition: .5s;
+    }
+    
+    .wrapper:hover .register-link p a {
+      color: #5300a0;
+    }
+    
+    .register-link p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="signup-page">
+
+<div class="wrapper">
+  <form id="signupForm">
+    <h2>Sign Up</h2>
+    
+    <div class="input-box">
+      <span class="icon"><ion-icon name="person"></ion-icon></span>
+      <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+    </div>
+
+    <div class="input-box">
+      <span class="icon"><ion-icon name="mail"></ion-icon></span>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="input-box">
+      <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+      <input type="password" name="password" id="password" placeholder="Create Password" required>
+    </div>
+    
+    
+    <div class="password-validation">
+      <div class="validation-item">
+        <span class="validation-icon unchecked" id="lengthCheck">◯</span>
+        <span>At least 8 characters</span>
+      </div>
+      <div class="validation-item">
+        <span class="validation-icon unchecked" id="numberCheck">◯</span>
+        <span>Contains a number</span>
+      </div>
+      <div class="validation-item">
+        <span class="validation-icon unchecked" id="specialCheck">◯</span>
+        <span>Contains a special character</span>
+      </div>
+      <div class="validation-item">
+        <span class="validation-icon unchecked" id="uppercaseCheck">◯</span>
+        <span>Contains uppercase letter</span>
+      </div>
+      <div class="validation-item">
+        <span class="validation-icon unchecked" id="lowercaseCheck">◯</span>
+        <span>Contains lowercase letter</span>
+      </div>
+    </div>
+
+    <div class="input-box">
+      <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+      <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirm Password" required>
+    </div>
+    
+    
+    <div class="password-validation">
+      <div class="validation-item">
+        <span class="validation-icon unchecked" id="matchCheck">◯</span>
+        <span>Passwords match</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <button type="submit" id="submitBtn">Register</button>
+
+    <div class="register-link">
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </form>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+ 
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirmPassword');
+    const submitBtn = document.getElementById('submitBtn');
+    const form = document.getElementById('signupForm');
+    
+    const lengthCheck = document.getElementById('lengthCheck');
+    const numberCheck = document.getElementById('numberCheck');
+    const specialCheck = document.getElementById('specialCheck');
+    const uppercaseCheck = document.getElementById('uppercaseCheck');
+    const lowercaseCheck = document.getElementById('lowercaseCheck');
+    const matchCheck = document.getElementById('matchCheck');
+    
+    function validatePassword() {
+      const password = passwordInput.value;
+      
+     
+      if (password.length >= 8) {
+        lengthCheck.textContent = '✓';
+        lengthCheck.className = 'validation-icon checked';
+      } else {
+        lengthCheck.textContent = '◯';
+        lengthCheck.className = 'validation-icon unchecked';
+      }
+      
+      
+      if (/\d/.test(password)) {
+        numberCheck.textContent = '✓';
+        numberCheck.className = 'validation-icon checked';
+      } else {
+        numberCheck.textContent = '◯';
+        numberCheck.className = 'validation-icon unchecked';
+      }
+      
+   
+      if (/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+        specialCheck.textContent = '✓';
+        specialCheck.className = 'validation-icon checked';
+      } else {
+        specialCheck.textContent = '◯';
+        specialCheck.className = 'validation-icon unchecked';
+      }
+      
+      
+      if (/[A-Z]/.test(password)) {
+        uppercaseCheck.textContent = '✓';
+        uppercaseCheck.className = 'validation-icon checked';
+      } else {
+        uppercaseCheck.textContent = '◯';
+        uppercaseCheck.className = 'validation-icon unchecked';
+      }
+      
+      
+      if (/[a-z]/.test(password)) {
+        lowercaseCheck.textContent = '✓';
+        lowercaseCheck.className = 'validation-icon checked';
+      } else {
+        lowercaseCheck.textContent = '◯';
+        lowercaseCheck.className = 'validation-icon unchecked';
+      }
+      
+      
+      if (password === confirmPasswordInput.value && password !== '') {
+        matchCheck.textContent = '✓';
+        matchCheck.className = 'validation-icon checked';
+      } else {
+        matchCheck.textContent = '◯';
+        matchCheck.className = 'validation-icon unchecked';
+      }
+    }
+    
+    
+    if (passwordInput && confirmPasswordInput) {
+      passwordInput.addEventListener('input', validatePassword);
+      confirmPasswordInput.addEventListener('input', validatePassword);
+    }
+    
+  
+if (form) {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const originalText = submitBtn.textContent;
+    
+    
+    submitBtn.textContent = 'Registering...';
+    submitBtn.disabled = true;
+    
+   
+    const formData = new FormData(this);
+    
+    fetch('../cvforge_api/signup.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      console.log('Response status:', response.status);
+      console.log('Response OK:', response.ok);
+      return response.text();
+    })
+    .then(data => {
+      console.log('Raw response data:', data);
+      console.log('Response length:', data.length);
+      console.log('Response type:', typeof data);
+      
+      
+      data = data.trim();
+      
+      if (data === '') {
+        alert('Empty response from server. Registration might have been successful. Redirecting to login...');
+        setTimeout(() => {
+          window.location.href = 'login.html?signup=success';
+        }, 1000);
+        return;
+      }
+      
+      
+      if (data.startsWith('success:')) {
+        
+        const successMessage = data.replace('success:', '').trim();
+        alert(successMessage || 'Registration successful!');
+        
+        
+        setTimeout(() => {
+          window.location.href = 'login.html?signup=success';
+        }, 1000);
+        
+      } else if (data.startsWith('error:')) {
+        
+        const errorMessage = data.replace('error:', '').trim();
+        alert('Error: ' + (errorMessage || 'Unknown error'));
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        
+      } else if (data.includes('window.location.href')) {
+        
+        console.log('Executing JavaScript redirect');
+        eval(data);
+        
+      } else if (data.includes('<!DOCTYPE') || data.includes('<html')) {
+        
+        console.error('Server returned HTML instead of expected response');
+        alert('Server error: Received HTML page instead of data. Check PHP errors.');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        
+      } else {
+       
+        console.log('Unexpected but non-error response. Assuming success.');
+        alert('Registration completed! Redirecting to login...');
+        setTimeout(() => {
+          window.location.href = 'login.html?signup=success';
+        }, 1000);
+      }
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      alert('Network error: ' + error.message);
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
+  });
+}
+  });
+</script>
+
+</body>
+</html>

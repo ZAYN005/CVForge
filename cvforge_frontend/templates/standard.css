@@ -1,0 +1,302 @@
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: 'Roboto', sans‑serif;
+    background-color: #050a14;
+    color: white;
+    list-style: 1.6;
+    -webkit-font‑smoothing: antialiased;
+    -moz-osx-font‑smoothing: grayscale;
+}
+
+/* Links and icons */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+i.bi {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Container for the main resume layout */
+.resume-container, .container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto 50px auto;
+    background-color: #050a14;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Left column styling */
+.left-column {
+    flex: 2 1 60%;
+    margin-right: 30px;
+}
+.left-column .header {
+    margin-bottom: 30px;
+}
+.left-column .name {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+}
+.left-column .summary p {
+    font-size: 1em;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* Section styling common for left and right columns */
+.section {
+    margin-bottom: 50px;
+}
+.section-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e0e0e0;
+}
+/* For right column titles override color */
+.right-column .section-title {
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+/* Section content styles */
+.section-content {
+    font-size: 1em;
+    color: inherit;
+}
+.section-content ul {
+    list-style: none;
+    margin-left: 20px;
+}
+.section-content ul li {
+    margin-bottom: 12px;
+}
+
+/* Skills list specifically */
+.skills-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+.skills-list li:before {
+    content: "•";
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Right column styling */
+.right-column {
+    flex: 1 1 35%;
+    background-color: #050a14;
+    color: #ffffff;
+    padding: 30px 25px 30px 25px;
+    border-radius: 10px;
+}
+.profile-picture img {
+    width: 80%;
+    height: auto;
+     background-color: #404349;
+    border: 20px solid #4c515a;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Education section specifics */
+.right-column .section-content p {
+    margin-bottom: 12px;
+}
+
+/* Contact section specifics */
+.right-column .section-contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.right-column .section-contact p i {
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+/* Responsive and utility classes */
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: #e0e0e0;
+    margin: 25px 0;
+}
+@media (max‑width: 1024px) {
+    .resume-container {
+        padding: 30px;
+    }
+    .left-column {
+        margin-right: 20px;
+    }
+    .section {
+        margin-bottom: 30px;
+    }
+    .left-column .name {
+        font-size: 3em;
+    }
+}
+@media (max‑width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left-column {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .right-column {
+        flex: 1 1 100%;
+    }
+}
+
+/* Specific spacing tweaks */
+.section-title.small-margin {
+    margin-bottom: 8px;
+}
+.section-content.compact ul li {
+    margin-bottom: 8px;
+}
+.profile-picture {
+    text-align: center;
+}
+.profile-picture img.smaller {
+    width: 60%;
+    margin: 0 auto 20px auto;
+}
+
+/* Color variants & stylistic modifiers */
+.bg‑blue {
+    background-color: #2c5aa0 !important;
+}
+.text‑white {
+    color: #ffffff !important;
+}
+.text‑dark {
+    color: white !important;
+}
+.border‑light {
+    border-bottom: 1px solid #e0e0e0;
+}
+.border‑white {
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+/* Print‑friendly adjustments */
+@media print {
+    body {
+        background-color: #ffffff;
+        color: white;
+    }
+    .resume-container {
+        box-shadow: none;
+        margin: 0;
+        padding: 20px;
+        border-radius: 0;
+    }
+    .right-column {
+        background-color: #ffffff !important;
+        color: white !important;
+    }
+    .right-column .section-title {
+        color: white !important;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+/* Extra styling for fine detail, hover states and interactive elements */
+a.icon‑link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: inherit;
+}
+a.icon‑link i {
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+}
+a.icon‑link:hover i {
+    transform: translateX(3px);
+}
+.section‑highlight {
+    background-color: #f0f8ff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.section‑highlight .section‑title {
+    color: white;
+}
+
+/* Additional spacing utility classes */
+.mt‑small { margin-top: 10px; }
+.mt‑medium { margin-top: 20px; }
+.mt‑large { margin-top: 30px; }
+.mb‑small { margin-bottom: 10px; }
+.mb‑medium { margin-bottom: 20px; }
+.mb‑large { margin-bottom: 30px; }
+
+/* Fine‑tuning section content for left column lists */
+.left-column .section‑content ul li span.highlight {
+    background-color: #040910;
+    color: #ffffff;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Custom scrollbar for the resume container (optional) */
+.resume-container::-webkit-scrollbar {
+    width: 8px;
+}
+.resume-container::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+.resume-container::-webkit-scrollbar-thumb {
+    background-color: #2c5aa0;
+    border-radius: 4px;
+}
+
+/* Placeholder for future interactive elements */
+.button‑link {
+    display: inline‑block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #2c5aa0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background‑color 0.3s ease;
+}
+.button‑link:hover {
+    background-color: #1f4f8a;
+}

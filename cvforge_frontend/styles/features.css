@@ -1,0 +1,204 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background-color: #003366;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    padding: 50px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Features Section */
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem; /* Increased font size for prominence */
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Feature Container (Horizontal Layout) */
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.feature {
+    width: calc(33.33% - 20px); /* 3 columns */
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    margin-bottom: 20px;
+}
+
+.feature-icon span {
+    font-size: 40px;
+    color: #6a4cff;
+}
+
+.feature h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #003366;
+    margin: 15px 0;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* AOS Animation */
+[data-aos="fade-up"] {
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Background Animation */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(145, 88, 255, 0.5);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Hover Effects for Feature Cards */
+.feature:hover .feature-icon span {
+    color: #ff6b6b;
+}
+
+.feature:hover h3 {
+    color: #6a4cff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .feature {
+        width: calc(50% - 20px); /* 2 columns on smaller screens */
+    }
+
+    .feature-container {
+        justify-content: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature {
+        width: 100%; /* 1 column on very small screens */
+    }
+}
